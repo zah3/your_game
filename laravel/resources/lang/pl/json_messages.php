@@ -6,18 +6,20 @@ return [
     */
 
     'success' => [
-        'created'   => ':model został/ła stworzona poprawnie.',
-
+        'created'   => ':model został/a stworzony/a poprawnie.',
+        'updated'   => ':model został/a uaktualniony/a poprawnie.'
     ],
 
     'fail' => [
-        'cannot_find'   => 'Nie można znaleźć :model.',
-        'deleted'       => ':model został usunięty/ta',
+        'cannot_find'       => 'Nie można znaleźć :model.',
+        'updating'          => 'Coś poszło nie tak podczas uaktualniania modelu :model.',
+        'deleted'           => ':model został/a usunięty/ta',
+        'send_failed_inf'   => 'Nie przesłano poprawnie danych.',
     ],
 
     'model' => [
-        'user'  => 'użytkownik',
-        'news'  => 'wiadomość',
+        'user'  => 'Użytkownik',
+        'news'  => 'Nowość',
     ],
 
 ];
