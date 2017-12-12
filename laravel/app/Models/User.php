@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable,SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -30,6 +31,22 @@ class User extends Authenticatable
         'u_remember_token',
     ];
 
+    protected $dates = [
+        'u_created_at',
+        'u_update_at',
+        'u_deleted_at',
+        'u_activated_at'
+    ];
+
+    const CREATED_AT = 'u_created_at';
+
+    const UPDATED_AT = 'u_updated_at';
+
+    const DELETED_AT = 'u_deleted_at';
+
+    /**
+     * @var string
+     */
     protected $table = 'users';
 
     protected $primaryKey = 'u_id';

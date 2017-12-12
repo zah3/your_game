@@ -1,7 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Zachar
- * Date: 2017-12-02
- * Time: 20:41
- */
+return [
+
+        'success' => [
+            'created'   => ':model został/a stworzony/a poprawnie.',
+            'updated'   => ':model został/a uaktualniony/a poprawnie.'
+        ],
+
+        'fail' => [
+            'cannot_find'   => 'Nie można znaleźć :model.',
+            'deleted'       => ':model został/a usunięty/ta',
+        ],
+
+        'model' => [
+            'user'  => 'Użytkownik',
+            'news'  => 'Nowość',
+        ],
+    ];
